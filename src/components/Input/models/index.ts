@@ -3,5 +3,7 @@ import { TextInputProps } from "react-native";
 import { Feather } from '@expo/vector-icons'
 
 export interface IInputProps extends TextInputProps {
-    icon?: "mail" | "lock"  
+    icon?: "mail" | "lock";
+    iconInInput?: "eye";
+    getSafety?: (value:boolean) => void  
 }

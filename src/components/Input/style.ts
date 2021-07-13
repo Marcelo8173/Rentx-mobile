@@ -17,10 +17,15 @@ export const IconContainer = styled.View`
 export const Wrapper = styled.View`
     margin-bottom: 8px;
     background: #F2F2FA;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 17px;
     flex: 1;
 `;
 
 export const Input = styled(TextInput)`
     padding: 20px;
+    flex: 1;
 `;
 
