@@ -25,20 +25,3 @@ export const SubTitle = styled.Text`
         margin-right: ${RFValue(100)}px;
     `}
 `;
-
-export const ContentForm = styled.View`
-    margin-top: ${RFValue(110)}px;
-    
-`;
-
-export const Remember = styled.View`
-    flex-direction: row;
-    justify-content: space-between;
-    color: red;
-    margin-bottom: ${RFValue(34)}px;
-`;
-
-export const Button = styled(RectButton)`
-    background: red;
-    padding: 19px;
-`
