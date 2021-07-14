@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components'
 import AppLoading from 'expo-app-loading'
 import Theme from './src/styles/theme'
-import {Login} from './src/screens/index'
+import Routes from './src/routes'
 import {
   useFonts,
   Inter_400Regular,
@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <Login />
+      <Routes />
     </ThemeProvider>
   );
 }

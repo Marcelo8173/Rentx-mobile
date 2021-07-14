@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
 import { Input } from '../../../components';
 import * as S from './styled'
-import { Text, View } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native'
 import {Button} from '../../../components/Button'
 import CheckBox from '@react-native-community/checkbox';
+import { useNavigation } from '@react-navigation/native';
 
 const FormLogin = () => {
 
     const [showPassword, setShowPassword] = useState(false)
     const [remember,setRemember] = useState(false)
+    const navigation = useNavigation()
 
     const handleGetSafety = () => {
         setShowPassword(!showPassword)
+    }
+
+    const handleSubmit = () => {
+        navigation.navigate('Dashboard')
     }
 
     return(
@@ -46,10 +52,12 @@ const FormLogin = () => {
                     />
                     <Text>Lembre-me</Text>
                 </S.CheckboxContent>
-                <Text>Esqueci minha senha</Text>
+                <TouchableOpacity>
+                    <Text>Esqueci minha senha</Text>
+                </TouchableOpacity>
             </S.Remember>
 
-            <Button title="Login"/>
+            <Button onPress={handleSubmit} title="Login"/>
         </S.ContentForm>
     )
 }

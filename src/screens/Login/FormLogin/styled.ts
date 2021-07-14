@@ -8,6 +8,7 @@ export const ContentForm = styled(KeyboardAvoidingView)`
 
 export const Remember = styled.View`
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     color: red;
     margin-bottom: ${RFValue(34)}px;
